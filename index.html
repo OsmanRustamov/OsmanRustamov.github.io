@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        html , body{
+            display: flex;
+            background-color: rgb(101, 230, 180);
+        }
+        .one{
+            height: 30px;
+            margin: 5pt;
+        }
+        
+        p{
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>        
+    
+    <p>Масса</p><input size="7" id="num1" class="one"/><p>кг </p>
+
+    <p>*</p>
+
+    <p>Высота</p><input size="7" id="num2" class="one"/><p>м</p>
+
+    <button onclick="func()" class="one">=</button>
+   
+    <p id="result"></p>
+    
+    <script>
+       function func(){
+             var num1 = Number(document.getElementById("num1").value);
+             var num2 = Number(document.getElementById("num2").value);
+             var result = num1 * num2 * 9.81;
+   
+             document.getElementById("result").innerHTML = result;
+             }
+    </script>   
+</body>
+</html>
